@@ -1,32 +1,106 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.dashboard-container {
-    background-color: #fff;
+    background-color: #f7f9fc;
+  }
+  
+  .dashboard-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-h1 {
-    color: #333;
-}
-button {
-    background-color: #007bff;
-    color: #fff;
+  }
+  
+  .navbar h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .btn-logout {
+    background-color: #f44336;
+    color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
-    font-size: 16px;
-}
-button:hover {
-    background-color: #0056b3;
-}
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-logout:hover {
+    background-color: #d32f2f;
+  }
+  
+  .welcome-section {
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .welcome-section h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .welcome-section p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .content-sections {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    color: #4caf50;
+  }
+  
+  .card p {
+    color: #777;
+    margin: 15px 0;
+  }
+  
+  .card button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card button:hover {
+    background-color: #388e3c;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  

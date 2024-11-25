@@ -1,9 +1,30 @@
-
-<body>
-    <div class="dashboard-container">
-        <h1>Vista Dashboard</h1>
-        <!-- Botón de Cerrar Sesión -->
-        <button (click)="logout()">Cerrar Sesión</button>
+<div class="dashboard-container">
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+      <h1>Bienvenido al Dashboard</h1>
+      <button (click)="logout()" class="btn-logout">Cerrar Sesión</button>
+    </nav>
+  
+    <!-- Área de bienvenida -->
+    <div class="welcome-section">
+      <h2>Hola, {{ username }}!</h2>
+      <p>Explora las secciones disponibles a continuación:</p>
     </div>
-</body>
-
+  
+    <!-- Tarjetas de contenido -->
+    <div class="content-sections">
+      <div class="card" (click)="navigateToStats()">
+        <h3>Estadísticas</h3>
+        <p>Consulta las métricas y datos clave.</p>
+      </div>
+      <div class="card" (click)="navigateToSettings()">
+        <h3>Configuración</h3>
+        <p>Administra tu cuenta y preferencias.</p>
+      </div>
+      <div class="card" (click)="navigateToSupport()">
+        <h3>Soporte</h3>
+        <p>Obtén ayuda para resolver problemas.</p>
+      </div>
+    </div>
+  </div>
+  

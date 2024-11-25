@@ -20,15 +20,19 @@ export class LoginComponent implements OnInit {
   login(): void {
     this.auth.login(this.loginData).subscribe(
       (response: any) => {
-        // Almacenar el token JWT en el local storage
-        localStorage.setItem('token', response.token);
+        if (!localStorage.getItem('token')) {
+          localStorage.setItem('token', response.token);
+        }
 
-        // Redirigir a la página de inicio u otra página
-        this.router.navigate(['/']);  // Cambia esta ruta según lo necesites
+        this.router.navigate(['/']);
       },
       (error) => {
         console.error('Error en el inicio de sesión:', error);
       }
     );
   }
+  redirectToRegister(){
+    this.router.navigate(['/register']);
+  }
 }
+

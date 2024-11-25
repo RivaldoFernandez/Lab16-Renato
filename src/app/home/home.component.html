@@ -1,1 +1,31 @@
-<p>home works!</p>
+<div class="home-container">
+  <!-- Encabezado -->
+  <header class="home-header">
+    <h1>¡Bienvenido a Casa!</h1>
+    <p>Explora las funcionalidades de nuestra aplicación y descubre cómo puede ayudarte.</p>
+  </header>
+
+  <!-- Secciones de información ficticia -->
+  <div class="features">
+    <div class="feature-card">
+      <h2>Tu Historial</h2>
+      <p>Revisa los eventos y actividades que has realizado recientemente.</p>
+      <button (click)="redirectToFeature('history')" class="btn-secondary">Ver Historial</button>
+    </div>
+    <div class="feature-card">
+      <h2>Preferencias</h2>
+      <p>Ajusta tus opciones personales para una experiencia personalizada.</p>
+      <button (click)="redirectToFeature('preferences')" class="btn-secondary">Configurar Preferencias</button>
+    </div>
+    <div class="feature-card">
+      <h2>Centro de Ayuda</h2>
+      <p>Accede a guías, tutoriales y soporte en tiempo real para cualquier duda.</p>
+      <button (click)="redirectToFeature('help')" class="btn-secondary">Ir al Centro de Ayuda</button>
+    </div>
+  </div>
+
+  <!-- Botón principal -->
+  <div class="action-section">
+    <button (click)="redirectToDashboard()" class="btn-primary">Ir al Dashboard</button>
+  </div>
+</div>
